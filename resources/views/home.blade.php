@@ -4,15 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Title</title>
+    <title>Document</title>
 </head>
 <body>
-
-    <h1>project ecom</h1>
-    <h2>hey man what;s up</h2>
-    <h3>babu</h3>
-
-    <h5>mero name samir ho</h5>
-    
+    <h2>Our Project will be here</h2>
 </body>
 </html>
