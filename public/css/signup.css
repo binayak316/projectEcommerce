@@ -1,0 +1,25 @@
+.center-form{
+    border:1px solid black;
+}
+.centralpart{
+    border-radius:10px;  
+    background:white !important;  
+    box-shadow: 2px 2px 2px gray;
+}
+
+.logoImage img{
+    height: 95px;
+    margin-left: 40%;
+}
+
+.logoImage{
+    background-color: #d9d9d9;
+}
+
+.loginLink{
+    text-decoration: none;
+}
+
+.loginLink:hover{
+    text-decoration: underline;
+}
