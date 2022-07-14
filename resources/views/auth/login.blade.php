@@ -25,19 +25,18 @@
                         <i class="fas fa-eye-slash d-none" id="hide_eye"></i>
                         </span>
                     </div>
-                </div>
-                 
+                </div>                 
             </div>
 
             <button type="submit" class="btn btn-primary">Login</button>
             <br><br>
-            <div class="col-md-12 resetPassword">
+            <div class="col-md-12 text-center resetPassword">
                 <a href="#">I forgot my password</a>
             </div>
 
-            <div class="registerUser">
-                <p>Don't have account?</p>
-                <a href="#">Sign Up</a>
+            <div class="text-center registerUser">
+                <p>Don't have account?</p> &nbsp;
+                <a href="signup">Sign Up</a>
             </div>
         </form>
     </div>

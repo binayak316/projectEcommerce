@@ -4,7 +4,7 @@ body{
 
 .loginContainer{
     background-color: white;
-    width: 25%;
+    width: 35%;
     margin-top: 8%;
     box-shadow: 2px 2px 2px gray;
     border-radius: 8px;
@@ -60,6 +60,7 @@ body{
     margin: 18%;
     margin-top: 10px;
     margin-bottom: 10px;
+    justify-content: center;
 }
 
 .registerUser a{
