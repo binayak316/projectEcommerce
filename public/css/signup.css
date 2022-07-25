@@ -5,6 +5,8 @@
     border-radius:10px;  
     background:white !important;  
     box-shadow: 2px 2px 2px gray;
+    width: 36%;
+    margin-left: 7%;
 }
 
 .logoImage img{
