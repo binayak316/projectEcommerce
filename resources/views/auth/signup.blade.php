@@ -15,39 +15,70 @@
                     <div class="d-flex mt-4">
                         <div class="col-6">
                             <label for="firstname">Firstname</label>
+                            <span class="text-danger small">*</span>
                             <div class="form-group">
-                              <input class="form-control" type="text" name="firstname" id="firstname" placeholder="First Name" required>
+                              <input class="form-control" type="text" name="firstname" id="firstname" value="{{old('firstname')}}" placeholder="First Name">
                               <span class="text-danger small"></span>
                             </div>
                         </div> &nbsp;
                         <div class="col-6">
                             <label for="lastname">Lastname</label>
+                            <span class="text-danger small">*</span>
                             <div class="form-group">
-                              <input class="form-control" type="text" name="firstname" id="lastname" placeholder="Last Name" required >
+                              <input class="form-control" type="text" name="lastname" id="lastname" value="{{old('lastname')}}" placeholder="Last Name" >
                               <span class="text-danger small"></span>
                             </div>
                         </div>
-                    </div> <br>
+                    </div>
+                    <div class="d-flex mt-4">
+                        <div class="col-6">
+                            <label for="gender">Gender</label>
+                            <span class="text-danger small">*</span>
+                            <select class="form-select" name="gender" id="gender">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                        </select>
+                        </div> &nbsp;
+                        <div class="col-6">
+                            <label for="">DOB</label>
+                            <span class="text-danger small">*</span>
+                            <input type="date" class="form-control">
+                        </div>
+                    </div><br>
                     <div class="col-12">
                         <label for="email">Email</label>
+                        <span class="text-danger small">*</span>
                         <div class="form-group">
-                            <input class="form-control" type="email" name="email" id="email" placeholder="Email" required >
+                            <input class="form-control" type="email" name="email" id="email" placeholder="Email">
                             <span class="text-danger small"></span>
                           </div>
                     </div> <br>
                     <div class="col-12">
                         <label for="password">New Password</label>
-                        <div class="form-group">
-                            <input class="form-control" type="password" name="password" id="password" placeholder="Enter Your New Password" required >
-                            <span class="text-danger small"></span>
-                          </div>
+                        <span class="text-danger small">*</span>
+                        <div class="form-group d-flex">
+                            <input class="form-control" type="password" name="password" id="password" placeholder="Enter Your New Password">
+                            <div class="input-group-append">
+                                <span class="input-group-text" onclick="new_password_show_hide();">
+                                <i class="fa-solid fa-eye" id="show_eye"></i>
+                                <i class="fas fa-eye-slash d-none" id="hide_eye"></i>
+                                </span>
+                            </div>
+                        </div>
                     </div> <br>                     
                     <div class="col-12">
-                        <div class="form-group">
-                            <label for="confirmpassword">Confirm Password</label>
-                            <input class="form-control" type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm Your Password" required >
-                            <span class="text-danger small"></span>
-                          </div>
+                        <label for="confirmPassword">Confirm Password</label>
+                        <span class="text-danger small">*</span>
+                        <div class="form-group d-flex">
+                            <input class="form-control" type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Your Password">
+                            <div class="input-group-append">
+                                <span class="input-group-text" onclick="confirm_password_show_hide();">
+                                <i class="fa-solid fa-eye" id="confirm_show_eye"></i>
+                                <i class="fas fa-eye-slash d-none" id="confirm_hide_eye"></i>
+                                </span>
+                            </div>
+                        </div>
                     </div> <br>
                     <div class="col-12 text-center" >
                         <button class="btn btn-primary" style="width:100%;">Sign up</button>
