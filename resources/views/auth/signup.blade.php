@@ -3,7 +3,8 @@
 @section('main')
     
 <div class="container mt-5 signupForm">
-    <form action="">
+    <form action=" {{route('user_signup')}} " method="POST">
+        @csrf
         <div class="row">
             <div class="col-3 left-side">
             </div>
@@ -18,7 +19,7 @@
                             <span class="text-danger small">*</span>
                             <div class="form-group">
                               <input class="form-control" type="text" name="firstname" id="firstname" value="{{old('firstname')}}" placeholder="First Name">
-                              <span class="text-danger small"></span>
+                              <span class="text-danger small">@error('firstname') {{$message}} @enderror</span>
                             </div>
                         </div> &nbsp;
                         <div class="col-6">
@@ -26,7 +27,7 @@
                             <span class="text-danger small">*</span>
                             <div class="form-group">
                               <input class="form-control" type="text" name="lastname" id="lastname" value="{{old('lastname')}}" placeholder="Last Name" >
-                              <span class="text-danger small"></span>
+                              <span class="text-danger small">@error('lastname') {{$message}} @enderror</span>
                             </div>
                         </div>
                     </div>
@@ -34,16 +35,18 @@
                         <div class="col-6">
                             <label for="gender">Gender</label>
                             <span class="text-danger small">*</span>
-                            <select class="form-select" name="gender" id="gender">
+                            <select class="form-select" name="gender" id="gender" value="gender">
                                 <option value="male">Male</option>
                                 <option value="female">Female</option>
                                 <option value="other">Other</option>
-                        </select>
+                            </select>
+                            <span class="text-danger small">@error('gender') {{$message}} @enderror</span>
                         </div> &nbsp;
                         <div class="col-6">
                             <label for="">DOB</label>
                             <span class="text-danger small">*</span>
-                            <input type="date" class="form-control">
+                            <input type="date" name="dob" id="dob" class="form-control">
+                            <span class="text-danger small">@error('dob') {{$message}} @enderror</span>
                         </div>
                     </div><br>
                     <div class="col-12">
@@ -51,7 +54,7 @@
                         <span class="text-danger small">*</span>
                         <div class="form-group">
                             <input class="form-control" type="email" name="email" id="email" placeholder="Email">
-                            <span class="text-danger small"></span>
+                            <span class="text-danger small">@error('email') {{$message}} @enderror</span>
                           </div>
                     </div> <br>
                     <div class="col-12">
@@ -66,6 +69,7 @@
                                 </span>
                             </div>
                         </div>
+                        <span class="text-danger small">@error('password') {{$message}} @enderror</span>
                     </div> <br>                     
                     <div class="col-12">
                         <label for="confirmPassword">Confirm Password</label>
@@ -79,6 +83,7 @@
                                 </span>
                             </div>
                         </div>
+                        <span class="text-danger small">@error('confirmPassword') {{$message}} @enderror</span>
                     </div> <br>
                     <div class="col-12 text-center" >
                         <button class="btn btn-primary" style="width:100%;">Sign up</button>

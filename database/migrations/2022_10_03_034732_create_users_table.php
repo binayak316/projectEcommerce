@@ -19,9 +19,10 @@ return new class extends Migration
             $table->string('lastname');
             $table->string('gender');
             $table->string('dob');
-            $table->string('email');
+            $table->string('email')->unique();
             $table->string('password');
             $table->string('confirmPassword');
+            $table->string('profilePic')->default('default.jpg');
             $table->timestamps();
         });
     }

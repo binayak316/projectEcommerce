@@ -3,7 +3,8 @@
 @section('main')
 <div class="container loginContainer">
     <div class="row">
-        <form action="">
+        <form action=" {{route('user_login')}} " method="POST">
+            @csrf
             <div class="col-md-12 logoImage">
                 {{-- <h2 class="logo">Logo here</h2> --}}
                 <img src="/image/logo/logo.gif" alt="">
@@ -14,6 +15,7 @@
             <div class="col-md-12">
                 <label for="email" class="form-label">Email</label>
                 <input type="text" class="form-control" name="email" id="email" placeholder="Enter your email">
+                <span class="text-danger small">@error('email') {{$message}} @enderror</span>
             </div><br>
             <div class="col-md-12">
                 <label for="password" class="form-label">Password</label>
@@ -25,10 +27,11 @@
                         <i class="fas fa-eye-slash d-none" id="hide_eye"></i>
                         </span>
                     </div>
-                </div>                 
+                </div> 
+                <span class="text-danger small">@error('password') {{$message}} @enderror</span>               
             </div>
 
-            <button type="submit" class="btn btn-primary">Login</button>
+            <button class="btn btn-primary">Login</button>
             <br><br>
             <div class="col-md-12 text-center resetPassword">
                 <a href="#">I forgot my password</a>
