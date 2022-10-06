@@ -4,5 +4,5 @@
     <h2>Our Project will be here</h2>
 
 
-    <a href="/logout">Logout</a>
+    <a href="{{route('user_logout')}}">Logout</a>
 @endsection

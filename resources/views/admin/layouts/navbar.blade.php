@@ -69,6 +69,9 @@
           <i class="fas fa-expand-arrows-alt"></i>
         </a>
       </li>
+      <ul class="navbar-nav mr-auto">
+        <li><a href="{{route('admin.logout')}}">Logout</a></li>
+      </ul>
     </ul>
   </nav>
   <!-- /.navbar -->

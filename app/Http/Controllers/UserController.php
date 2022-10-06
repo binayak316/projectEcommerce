@@ -13,7 +13,7 @@ class UserController extends Controller
         {
             return view('home');
         }
-        return redirect('/login');
+        return redirect(route('userLogin'))->with('error', 'You have to login first');
     }
 
     
@@ -34,9 +34,9 @@ class UserController extends Controller
             'lastname' => 'required',
             'gender' => 'required',
             'dob' => 'required',
-            'email' => 'required | unique:users',
-            'password' => 'required',
-            'confirmPassword' => 'required',
+            'email' => 'required | unique:users | email',
+            'password' => 'required|min:6',
+            'confirmPassword' => 'required|same:password|min:6',
         ]);
         // dd($attributes);
         // dd('Successfully Validated');
@@ -55,27 +55,21 @@ class UserController extends Controller
     public function loginUser(Request $request){
         // dd($request->all());
         $attributes = $request->validate([
-            'email' => 'required',
-            'password' => 'required'
+            'email' => 'required | email',
+            'password' => 'required |  min:6'
         ]);
 
         if (Auth::attempt($attributes)) {
             return redirect()->route('home_page')->with('success','You are successfully logged in.');
         }else{
-            return back()->with('fail', 'You have to enter valid details.');
+            return back()->with('error', 'Credentials does not match!');
         }
 
     }
 
 
     public function logout(Request $request){
-        Auth::logout();
-
-        $request->session()->invalidate();
- 
-        $request->session()->regenerateToken();
-        
-        return redirect(route('home_page'))->with('success', 'You are logged out!');
-        // return redirect('/')->with('success', 'You're logged out!);
+        Auth::guard('web')->logout();
+        return redirect()->route('userLogin')->with('success', 'You are logged out!');
     }
 }

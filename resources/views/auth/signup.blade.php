@@ -90,7 +90,7 @@
                     </div><br>
                     <div class="col-12 d-flex justify-content-center">
                         <p>Already have an account?</p>&nbsp;
-                        <a href="login" class="loginLink">Login</a>
+                        <a href="{{ route('userLogin') }}" class="loginLink">Login</a>
                     </div> <br>
                 </div>
                 <div class="col-3 right-side">
