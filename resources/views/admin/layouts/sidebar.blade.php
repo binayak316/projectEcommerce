@@ -1,7 +1,7 @@
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="/dashboard" class="brand-link">
+    <a href="{{ route('admin.dashboard') }}" class="brand-link">
       <img src="/image/logo/logo.gif" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">Blue Bird</span>
     </a>
@@ -11,22 +11,10 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="/image/avatar5.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Super Admin</a>
-        </div>
-      </div>
-
-      <!-- SidebarSearch Form -->
-      <div class="form-inline">
-        <div class="input-group" data-widget="sidebar-search">
-          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-          <div class="input-group-append">
-            <button class="btn btn-sidebar">
-              <i class="fas fa-search fa-fw"></i>
-            </button>
-          </div>
+          <a href="{{ route('admin.dashboard') }}" class="d-block">Admin</a>
         </div>
       </div>
 
@@ -35,8 +23,8 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+          <li class="nav-item">
+            <a href="{{ route('admin.dashboard') }}" class="nav-link {{Request::routeIs('admin.dashboard') ? 'active' : ' '}}">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -44,7 +32,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ route('admin.our-user') }}" class="nav-link {{Request::routeIs('admin.our-user') ? 'active' : ' '}}">
               <i class="nav-icon fas fa-users"></i>
               <p>
                 Our Users
@@ -52,7 +40,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ route('admin.add-product') }}" class="nav-link {{Request::routeIs('admin.add-product') ? 'active' : ' '}}">
               <i class="nav-icon fas fa-cart-plus"></i>
               <p>
                 Add Product
@@ -60,7 +48,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ route('admin.new-order') }}" class="nav-link {{Request::routeIs('admin.new-order') ? 'active' : ' '}}">
               <i class="nav-icon fas fa-edit"></i>
               <p>
                 New Orders
@@ -68,7 +56,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="#" class="nav-link {{Request::routeIs('admin.new-feature') ? 'active' : ' '}}">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 New Features
@@ -77,7 +65,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="#" class="nav-link {{Request::routeIs('admin.monthly-charts') ? 'active' : ' '}}">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
                 Monthly Charts

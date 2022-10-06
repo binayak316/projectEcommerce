@@ -6,7 +6,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="/dashboard" class="nav-link">Home</a>
+        <a href="{{ route('admin.dashboard') }}" class="nav-link">Home</a>
       </li>
     </ul>
 
@@ -33,6 +33,25 @@
           </form>
         </div>
       </li>
+
+
+
+       <!-- Profile Section & Logout Button -->
+       <div class="dropdown">
+        <span class="dropdown-toggle user-panel d-flex" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <div class="image">
+          <img src="/image/avatar5.png" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Admin</a>
+        </div>
+        </span>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+          <li><a class="dropdown-item" href="#">Change Password</a></li>
+          <li><a class="dropdown-item" href="{{route('admin.logout')}}">Logout</a></li>
+        </ul>
+      </div>
 
       
       <!-- Notifications Dropdown Menu -->
@@ -69,9 +88,6 @@
           <i class="fas fa-expand-arrows-alt"></i>
         </a>
       </li>
-      <ul class="navbar-nav mr-auto">
-        <li><a href="{{route('admin.logout')}}">Logout</a></li>
-      </ul>
     </ul>
   </nav>
   <!-- /.navbar -->
