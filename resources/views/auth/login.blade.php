@@ -39,7 +39,7 @@
 
             <div class="text-center registerUser">
                 <p>Don't have account?</p> &nbsp;
-                <a href="signup">Sign Up</a>
+                <a href="{{ route('userSignup') }}">Sign Up</a>
             </div>
         </form>
     </div>
