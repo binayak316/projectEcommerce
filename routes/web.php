@@ -15,8 +15,8 @@ Route::group(['prefix' => 'admin'], function() {
 	
 	Route::group(['middleware' => 'admin.auth'], function(){
 		Route::get('/dashboard',[AdminController ::class, 'dashboard'])->name('admin.dashboard');
-		// Route::get('/our-user',[AdminController ::class, 'our-user'])->name('admin.our-user');
-		Route::view('/our-user','admin.our-user')->name('admin.our-user');
+		Route::get('/our-user',[AdminController ::class, 'ourUser'])->name('admin.our-user');
+		// Route::view('/our-user','admin.our-user')->name('admin.our-user');
 		Route::view('/add-product','admin.add-product')->name('admin.add-product');
 		Route::view('/new-order','admin.new-order')->name('admin.new-order');
 		Route::get('/dashboard',[AdminController ::class, 'dashboard'])->name('admin.dashboard'); 

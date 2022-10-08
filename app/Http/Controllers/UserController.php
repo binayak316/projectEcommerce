@@ -9,9 +9,10 @@ use Illuminate\Support\Facades\Auth;
 class UserController extends Controller
 {
     public function index(){
+        $users = User::all();
         if(Auth::check())
         {
-            return view('home');
+            return view('home', ['user'=> $users]);
         }
         return redirect(route('userLogin'))->with('error', 'You have to login first');
     }
@@ -34,7 +35,7 @@ class UserController extends Controller
             'lastname' => 'required',
             'gender' => 'required',
             'dob' => 'required',
-            'email' => 'required | unique:users | email',
+            'email' => 'required|unique:users|email',
             'password' => 'required|min:6',
             'confirmPassword' => 'required|same:password|min:6',
         ]);
@@ -55,8 +56,8 @@ class UserController extends Controller
     public function loginUser(Request $request){
         // dd($request->all());
         $attributes = $request->validate([
-            'email' => 'required | email',
-            'password' => 'required |  min:6'
+            'email' => 'required|email',
+            'password' => 'required|min:6'
         ]);
 
         if (Auth::attempt($attributes)) {
