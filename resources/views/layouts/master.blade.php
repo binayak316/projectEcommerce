@@ -5,22 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> @yield('title')</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset('/css/login.css')}}">
-    <link rel="stylesheet" href="{{ asset('/css/signup.css')}}">
+    <script src="https://kit.fontawesome.com/bc607b3e78.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('/css/login.css' )}}">
+    <link rel="stylesheet" href="{{ asset('/css/signup.css' )}}">
     <script src="https://kit.fontawesome.com/bc607b3e78.js" crossorigin="anonymous"></script>
     <!-- CSS for toastr -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.0/css/toastr.css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="{{ asset('/css/custom.css') }}">
+    @yield('css')
 
 </head>
 <body>
+    @auth
+    @include('layouts.navbar')
+    @endauth
 
-   @yield('main')
-
+    @yield('main')
+    
+    @auth
+    @include('layouts.footer')
+    @endauth
+    
   <script src=" {{asset('/js/login.js')}} "></script>
   <script src=" {{asset('/js/signup.js')}} "></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
 
 
@@ -47,5 +56,6 @@
             @endif
         });
     </script>
+    @stack('js')
 </body>
 </html>

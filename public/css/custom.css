@@ -1,0 +1,78 @@
+/* All css style excluding admins side */
+.dropdown-toggle::after{
+    display: none;
+}
+/* Navbar part Begins*/
+.header-left img{
+    height: 50px;
+}
+
+.userAvatar{
+    height: 40px;
+    border-radius: 50%;
+}
+
+.header-left{
+    margin-top: -85px;
+    margin-bottom: -90px;
+    cursor: pointer;
+}
+
+.nav-item .nav-link{
+    margin: 5px;
+    color: black;
+    font-weight: bold;
+}
+
+.nav-item .navLink:hover{
+    color: white;
+    border-radius: 10px;
+    font-weight: bolder;
+    background-color: rgb(97, 147, 212);
+    box-shadow: 3px 4px 8px rgba(0, 76, 252, 1);
+}
+
+.logout{
+    margin-left: 18%;
+    align-items: center;
+}
+/* Navbar Ends */
+
+
+
+
+
+
+
+/* Home Page Begins*/
+.carousel-item img{
+    height: 500px;
+}
+
+
+
+.cards .card{
+    width: 20rem;
+    margin: 0.5rem;
+    padding: 1px;
+}
+
+.cards .card img{
+    height: 20rem;
+    width: auto;
+    object-fit: cover;
+}
+
+/* Home Page Ends*/
+
+
+
+
+
+
+
+
+
+/* Footer part begins*/
+
+/* Footer Ends */

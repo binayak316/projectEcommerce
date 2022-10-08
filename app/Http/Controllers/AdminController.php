@@ -2,13 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
     public function dashboard(){
-        return view('admin.dashboard');
+        $userCount = User::get();
+        return view('admin.dashboard', ['userCount'=> $userCount]);
+    }
+
+    public function ourUser(){
+        $users = User::all();
+        // dd($users);
+        return view('admin.our-user', ['users'=>$users]);
     }
 
     public function authenticate(Request $request){

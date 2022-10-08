@@ -1,10 +1,11 @@
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="{{ route('admin.dashboard') }}" class="brand-link">
-      <img src="/image/logo/logo.gif" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+    <a class="adminLogo brand-link" href="{{ route('admin.dashboard') }}">@include('/svg/bluebird')</a>
+    <!-- <a href="" class="brand-link">
+      <img src="/image/logo/logo.gif" alt="Blue Bird Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">Blue Bird</span>
-    </a>
+    </a> -->
 
     <!-- Sidebar -->
     <div class="sidebar">

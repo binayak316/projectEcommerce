@@ -16,6 +16,7 @@
         <!-- CSS for toastr -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.0/css/toastr.css" rel="stylesheet" />
         <link rel="stylesheet" href="{{ asset('css/admin.css') }}"/>
+        @yield('css')
     </head>
     <body class="hold-transition sidebar-mini">
         <div class="wrapper">
@@ -63,6 +64,6 @@
             });
         </script>
 
-
+        @stack('js')
     </body>
 </html>

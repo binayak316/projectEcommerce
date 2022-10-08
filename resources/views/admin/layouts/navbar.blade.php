@@ -12,6 +12,24 @@
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
+       <!-- Profile Section & Logout Button -->
+       <div class="dropdown">
+          <span class="dropdown-toggle user-panel d-flex" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <div class="image">
+            <img src="/image/avatar5.png" class="img-circle elevation-2" alt="User Image">
+          </div>
+          <div class="info">
+            <a href="#" class="d-block">Admin</a>
+          </div>
+          </span>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+            <li><a class="dropdown-item" href="#">Change Password</a></li>
+            <li><a class="dropdown-item" href="{{route('admin.logout')}}">Logout</a></li>
+          </ul>
+        </div>
+
+      
       <!-- Navbar Search -->
       <li class="nav-item">
         <a class="nav-link" data-widget="navbar-search" href="#" role="button">
@@ -34,26 +52,7 @@
         </div>
       </li>
 
-
-
-       <!-- Profile Section & Logout Button -->
-       <div class="dropdown">
-        <span class="dropdown-toggle user-panel d-flex" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        <div class="image">
-          <img src="/image/avatar5.png" class="img-circle elevation-2" alt="User Image">
-        </div>
-        <div class="info">
-          <a href="#" class="d-block">Admin</a>
-        </div>
-        </span>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Edit Profile</a></li>
-          <li><a class="dropdown-item" href="#">Change Password</a></li>
-          <li><a class="dropdown-item" href="{{route('admin.logout')}}">Logout</a></li>
-        </ul>
-      </div>
-
-      
+     
       <!-- Notifications Dropdown Menu -->
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
