@@ -2,7 +2,7 @@
 .dropdown-toggle::after{
     display: none;
 }
-/* Navbar part Begins*/
+/* Navbar part Begins*/ 
 .header-left img{
     height: 50px;
 }
@@ -45,16 +45,24 @@
 
 
 /* Home Page Begins*/
+.main{
+    margin-top: 5.5rem;
+}
+
 .carousel-item img{
     height: 500px;
+    object-fit: cover;
 }
 
 
+.cards{
+    gap: 10px;
+}
 
 .cards .card{
-    width: 20rem;
-    margin: 0.5rem;
-    padding: 1px;
+    width: 19rem;
+    /* margin: 0.5rem; */
+    /* padding: 1px; */
 }
 
 .cards .card img{
@@ -74,5 +82,44 @@
 
 
 /* Footer part begins*/
+.footer-left, .footer-middle-left, .footer-middle-right, .footer-right{
+    padding: 2rem;
+}
 
+.footer-left svg{
+    margin-top: -4rem;
+    margin-bottom: -3.5rem;
+}
+
+.footer-middle-left, .footer-middle-right{
+    margin: 4rem 0 4rem 0;
+    font-weight: 500;
+}
+
+.footer-middle-left a, .footer-middle-right a{
+    color: darkgray;
+    text-decoration: none;
+}
+
+.footer-middle-left a:hover, .footer-middle-right a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-right h5{
+    color: gray;
+}
+
+.footer-right p{
+    text-align: center;
+    color: black;
+    background-color: silver;
+    margin: 1px 110px 6px 0px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.footer-right p:hover{
+    color: white;
+}
 /* Footer Ends */

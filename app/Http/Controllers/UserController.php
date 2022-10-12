@@ -10,13 +10,8 @@ class UserController extends Controller
 {
     public function index(){
         $users = User::all();
-        if(Auth::check())
-        {
             return view('home', ['user'=> $users]);
         }
-        return redirect(route('userLogin'))->with('error', 'You have to login first');
-    }
-
     
     public function login(){
         return view('auth.login');
@@ -71,6 +66,6 @@ class UserController extends Controller
 
     public function logout(Request $request){
         Auth::guard('web')->logout();
-        return redirect()->route('userLogin')->with('success', 'You are logged out!');
+        return redirect()->route('home_page')->with('success', 'You are logged out!');
     }
 }
