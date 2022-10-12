@@ -15,6 +15,12 @@
                     <li class="breadcrumb-item active">Add Product</li>
                 </ol>
             </div>
+            <div class="addProduct">
+                <form action="" method="POST">
+                    @csrf
+                    
+                </form>
+            </div>
         </div>
    
     </div>
