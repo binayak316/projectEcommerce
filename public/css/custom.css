@@ -73,7 +73,99 @@
 
 /* Home Page Ends*/
 
+/*---------------------
+   CONTACT GRID BEGIN
+----------------------*/
+.contact-container{
+	background: url(img/1.jpg) no-repeat center center #ffffff;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
+	background-color: #f2f3f5;
+	padding: 40px 30px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
 
+.contact-container h3{
+	text-align: center;
+	font-size: 25px;
+}
+
+.contact-container p{
+	text-align: center;
+	font-size: 15px;
+}
+
+.contact-container .forms{
+	margin-bottom: 30px;
+	border: 1px solid white;
+	box-sizing: border-box;
+	font-size: 16px;
+	outline: 0 none;
+	padding: 10px 25px;
+	height: 55px;
+	resize: none;
+	width: 100%;
+	border-radius: 10px;
+	box-shadow: 5px 8px 20px rgba(46, 60, 74, 0.76);
+}
+
+.contact-container textarea {
+	padding: 20px 25px !important;
+	height: 310px !important;
+	width: 100%;
+	padding-left: 30px;
+	font-size: 18px;
+	margin-left: 20px;
+	box-sizing: border-box;
+	border: 1px solid white;
+	border-radius: 10px;
+	box-shadow: 5px 8px 20px rgba(46, 60, 74, 0.76);
+}
+
+
+.item1{
+	grid-column: 1 / span4;
+
+
+}
+
+.item2{
+	grid-column-start: 1;
+	grid-column-end: 3;
+
+}
+
+.item3{
+	grid-column: 3 / span4;
+
+}
+
+.item4{
+	grid-column: 1 / span4;
+	text-align: center;
+	padding: 15px;
+}
+
+button{
+	background-color: gray;
+	padding: 10px;
+	border: 1px solid black;
+	border-radius: 9px;
+	cursor: pointer;
+}
+
+button:hover{
+	background-color: brown;
+	color: white;
+	box-shadow: 5px 8px 20px rgba(46, 60, 74, 0.76);
+
+}
+
+/*-----------------------------
+	    Contact Ends
+------------------------------*/
 
 
 

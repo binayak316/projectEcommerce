@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
-
+use App\Http\Controllers\ProductController;
 
 // -----------------Admin Side-----------------------//
 Route::group(['prefix' => 'admin'], function() {
@@ -17,7 +17,12 @@ Route::group(['prefix' => 'admin'], function() {
 		Route::get('/dashboard',[AdminController ::class, 'dashboard'])->name('admin.dashboard');
 		Route::get('/our-user',[AdminController ::class, 'ourUser'])->name('admin.our-user');
 		// Route::view('/our-user','admin.our-user')->name('admin.our-user');
-		Route::view('/add-product','admin.add-product')->name('admin.add-product');
+		Route::get('/add-product',[ProductController::class, 'index'])->name('admin.add-product');
+		Route::post('/add-product', [ProductController::class, 'storeProduct'])->name('storeProduct');
+		Route::get('/edit-product/{id}', [ProductController::class, 'editProduct'])->name('editProduct');
+		Route::put('/edit-product/{id}', [ProductController::class, 'updateProduct'])->name('updateProduct');
+		Route::get('/delete-product/{id}', [ProductController::class, 'deleteProduct'])->name('deleteProduct');
+
 		Route::view('/new-order','admin.new-order')->name('admin.new-order');
 		Route::get('/dashboard',[AdminController ::class, 'dashboard'])->name('admin.dashboard'); 
 		Route::get('/dashboard',[AdminController ::class, 'dashboard'])->name('admin.dashboard'); 
