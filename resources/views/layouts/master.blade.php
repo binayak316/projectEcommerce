@@ -25,6 +25,7 @@
     
     <br>
     @if(Request::path() == '/')
+    @include('layouts.contactform')
     @include('layouts.footer')
     @endif
     

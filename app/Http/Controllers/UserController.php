@@ -2,15 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
     public function index(){
         $users = User::all();
-            return view('home', ['user'=> $users]);
+        // $productDetails = Product::all()->paginate(8);
+        $productDetails = DB::table('products')->paginate(8);
+            return view('home', compact('users', 'productDetails'));
         }
     
     public function login(){

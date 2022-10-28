@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -10,7 +11,8 @@ class AdminController extends Controller
 {
     public function dashboard(){
         $userCount = User::get();
-        return view('admin.dashboard', ['userCount'=> $userCount]);
+        $productCount = Product::all();
+        return view('admin.dashboard', compact('userCount', 'productCount'));
     }
 
     public function ourUser(){

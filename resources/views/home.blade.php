@@ -32,97 +32,24 @@
   <!-- Cards -->
   <div class="container">
     <div class="">
-      <h2 class="text-center mt-5">Buy from here</h2>
+      <h2 class="text-center mt-5">Our Products</h2>
     </div>
     <div class="cards d-flex flex-wrap">
+      @foreach($productDetails as $productDetail)
         <div class="card">
-          <img src="{{ asset('/image/slider/photo1.png') }}" class="card-img-top" alt=""><hr>
+          <img src="{{ asset('/image/products/'. $productDetail->product_image) }}" class="card-img-top" alt=""><hr>
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text.</p>
-            <p class="card-text">Rs. 7500</p>
+            <h5 class="card-title">{{ $productDetail->product_title }}</h5>
+            <p class="card-text">{{ $productDetail->product_desc }}</p>
+            <p class="card-price">{{ $productDetail->product_price }}</p>
             <a href="#"><button class="btn btn-primary" style="width: 46%;">Add to cart</button></a>
             <a href="#"><button class="btn btn-primary" style="width: 52%;">Buy Now</button></a>
           </div>
         </div>
-    
-        <div class="card">
-          <img src="{{ asset('/image/products/prod-2.jpg') }}" class="card-img-top" alt=""><hr>
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text.</p>
-            <p class="card-text">Rs. 7500</p>
-            <a href="#"><button class="btn btn-primary" style="width: 46%;">Add to cart</button></a>
-            <a href="#"><button class="btn btn-primary" style="width: 52%;">Buy Now</button></a>
-          </div>
-        </div>
-    
-        <div class="card">
-          <img src="{{ asset('/image/products/prod-2.jpg') }}" class="card-img-top" alt=""><hr>
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text.</p>
-            <p class="card-text">Rs. 7500</p>
-            <a href="#"><button class="btn btn-primary" style="width: 46%;">Add to cart</button></a>
-            <a href="#"><button class="btn btn-primary" style="width: 52%;">Buy Now</button></a>
-          </div>
-        </div>
-    
-        <div class="card">
-          <img src="{{ asset('/image/products/prod-2.jpg') }}" class="card-img-top" alt=""><hr>
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text.</p>
-            <p class="card-text">Rs. 7500</p>
-            <a href="#"><button class="btn btn-primary" style="width: 46%;">Add to cart</button></a>
-            <a href="#"><button class="btn btn-primary" style="width: 52%;">Buy Now</button></a>
-          </div>
-        </div>
-  
-        <div class="card">
-          <img src="{{ asset('/image/products/prod-2.jpg') }}" class="card-img-top" alt=""><hr>
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text.</p>
-            <p class="card-text">Rs. 7500</p>
-            <a href="#"><button class="btn btn-primary" style="width: 46%;">Add to cart</button></a>
-            <a href="#"><button class="btn btn-primary" style="width: 52%;">Buy Now</button></a>
-          </div>
-        </div>
-  
-        <div class="card">
-          <img src="{{ asset('/image/slider/photo1.png') }}" class="card-img-top" alt=""><hr>
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text.</p>
-            <p class="card-text">Rs. 7500</p>
-            <a href="#"><button class="btn btn-primary" style="width: 46%;">Add to cart</button></a>
-            <a href="#"><button class="btn btn-primary" style="width: 52%;">Buy Now</button></a>
-          </div>
-        </div>
-  
-        <div class="card">
-          <img src="{{ asset('/image/products/prod-2.jpg') }}" class="card-img-top" alt=""><hr>
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text.</p>
-            <p class="card-text">Rs. 7500</p>
-            <a href="#"><button class="btn btn-primary" style="width: 46%;">Add to cart</button></a>
-            <a href="#"><button class="btn btn-primary" style="width: 52%;">Buy Now</button></a>
-          </div>
-        </div>
-  
-        <div class="card">
-          <img src="{{ asset('/image/slider/photo1.png') }}" class="card-img-top" alt=""><hr>
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text.</p>
-            <p class="card-text">Rs. 7500</p>
-            <a href="#"><button class="btn btn-primary" style="width: 46%;">Add to cart</button></a>
-            <a href="#"><button class="btn btn-primary" style="width: 52%;">Buy Now</button></a>
-          </div>
-        </div>
-    </div>
+      @endforeach
+    </div> 
+    <br>
+    <span class="d-flex justify-content-center">{{ $productDetails->links() }}</span>
   </div>
 </div>
 @endsection

@@ -5,6 +5,6 @@
       You found here anything what you want
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">bluebirdshoppingcenter.com.np</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2022 <a href="https://adminlte.io">bluebirdshoppingcenter.com.np</a>.</strong> All rights reserved.
   </footer>
 <!-- ./wrapper -->
